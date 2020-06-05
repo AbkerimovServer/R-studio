@@ -3,12 +3,12 @@
 1. ### [Метод kNN и kwNN](/metricAlgo)
 
 ## Байесовские алгоритмы
-1. ### [Линии уровня](/bayesAlgo/) (**[shiny](https://enverwalker.shinyapps.io/normallines/)**)
-1. ### [Наивный байесовский классификатор](/bayesAlgo/) (**[shiny](https://enverwalker.shinyapps.io/naivebayes/)**)
-1. ### [Подстановочный (plug-in) алгоритм](/bayesAlgo/) (**[shiny](https://enverwalker.shinyapps.io/plug-in/)**)
+1. ### [Линии уровня](/bayesAlgo/) 
+1. ### [Наивный байесовский классификатор](/bayesAlgo/) 
+1. ### [Подстановочный (plug-in) алгоритм](/bayesAlgo/) 
 
 ## Линейные алгоритмы
-1. ### [ADALINE и правило Хебба](/linearAlgo/) (**[shiny](https://enverwalker.shinyapps.io/adalinehebb/)**)
+1. ### [ADALINE и правило Хебба](/linearAlgo/) 
 
 ## Метрические алгоритмы
 Метрические алгоритмы классифицируют объекты в зависимости от их сходства, а для оценки сходства объектов используют функцию расстояния, называемую *метрикой*. Чем меньше расстояние, тем больше объекты похожи друг на друга.
@@ -42,7 +42,7 @@ kNN <- function(xl, z, k)
 }
 ```
 #### Карта классификации:
-![](https://github.com/enverwalker/R_/blob/master/metricAlgo/img/pict_KNN2.PNG)
+![](https://github.com/AbkerimovServer/R-studio/tree/master/metricAlgo/img/pict_KNN2.PNG)
 
 ### Алгоритм 1NN
 Алгоритм 1NN является частным случаем KNN. При его использовании аналогичным образом измеряется расстояние от классифицируемого объекта  z до всех элементов обучающей выборки Xl. Далее происходит сортировка этих расстояний. В качестве ответа(класса) выводится тот класс, элемент которого явлется самым ближайшим к классифицируемому.   
@@ -66,7 +66,7 @@ nn <- function(z, xl)
 }
 ```
 #### Карта классификации:
-![](https://enverwalker/R_/blob/master/metricAlgo/img/pict_1NN2.PNG)
+![](https://github.com/AbkerimovServer/R-studio/tree/master/metricAlgo/img/pict_1NN2.PNG)
 
 ### Алгоритм KwNN
 Метод KwNN по своей сути является модернизированным алгоритмом KNN, он заключается в следующем:
@@ -107,4 +107,4 @@ kwNN <- function(xl, z, k, q)
 }
 ```
 #### Карта классификации:
-![](https://enverwalker/R_/blob/master/metricAlgo/img/pict_KwNN.PNG)
+![](https://github.com/AbkerimovServer/R-studio/tree/master/metricAlgo/img/pict_KwNN.PNG)
