@@ -3,12 +3,12 @@
 1. ### [Метод kNN и kwNN](/metricAlgo)
 
 ## Байесовские алгоритмы
-1. ### [Линии уровня](/bayesAlgo/) (**[shiny](https://enverwalker.shinyapps.io/normallines/)**)
-1. ### [Наивный байесовский классификатор](/bayesAlgo/) (**[shiny](https://enverwalker.shinyapps.io/naivebayes/)**)
-1. ### [Подстановочный (plug-in) алгоритм](/bayesAlgo/) (**[shiny](https://enverwalker.shinyapps.io/plug-in/)**)
+1. ### [Линии уровня](/bayesAlgo/) 
+1. ### [Наивный байесовский классификатор](/bayesAlgo/) 
+1. ### [Подстановочный (plug-in) алгоритм](/bayesAlgo/) 
 
 ## Линейные алгоритмы
-1. ### [ADALINE и правило Хебба](/linearAlgo/) (**[shiny](https://enverwalker.shinyapps.io/adalinehebb/)**)
+1. ### [ADALINE и правило Хебба](/linearAlgo/) 
 
 ## Байесовские алгоритмы
 Введём понятия **вероятностей**:
@@ -29,12 +29,12 @@
 
 Для классифицируемого объекта вычисляются _функции правдоподобия_ каждого из классов, по ним вычисляются _апостериорные вероятности_ классов. Объект относится к тому классу, для которого _апостериорная вероятность_ максимальна.  
 
-<img src="https://github.com/enverwalker/R_/blob/master/bayesAlgo/img/bayes1.gif" width="270"> 
+<img src="https://github.com/AbkerimovServer/R-studio/tree/master/bayesAlgo/img/bayes1.gif" width="270"> 
 
 Алгоритм **a(x)** называется **оптимальным байесовским решающим правилом**, где   
 **P(y)** - _априорные вероятности_ классов,   
 **p(x|y)** - _функции правдоподобия_,  
-<img src="https://github.com/enverwalker/R_/blob/master/bayesAlgo/img/lambday.gif"> - _величина потери_ алгоритмом **а** при неправильной классификации объекта класса **y**  
+<img src="https://github.com/AbkerimovServer/R-studio/tree/master/bayesAlgo/img/lambday.gif"> - _величина потери_ алгоритмом **а** при неправильной классификации объекта класса **y**  
 
 _иными словами_:   
 По известному вектору признаков - **x**, мы определяем класс **y**, к которому принадлежит объект из **a(x)** по формуле:   
@@ -86,8 +86,7 @@ drawLines <- function(center, cv) {
   contour(X, Y, Z)
 }
 ```
-С реализацией на **shiny** можно ознакомиться по
-    [ссылке](https://enverwalker.shinyapps.io/normallines/)
+
 ### Наивный байесовский классификатор  
 **Наивный байесовский алгоритм** – это алгоритм классификации, основанный на _теореме Байеса_ с предположением, что все признаки есть независимые случайные величины. **НБА** предполагает, что наличие какого-либо признака в классе не связано с наличием какого-либо другого признака. В его работе стоит задача найти оценки **n**-одномерных плотностей(**j-го** признака для класса **y**.) и подставить их в оптимальное байесовское решающее правило.
 
@@ -108,4 +107,4 @@ naiveb = function(x, Py, Mo, covar, m, n) {
 }
 ```
 #### Карта классификации:
-![](https://github.com/enverwalker/R_/blob/master/bayesAlgo/img/naiveb.PNG) 
+![](https://github.com/AbkerimovServer/R-studio/tree/master/bayesAlgo/img/naiveb.PNG) 
